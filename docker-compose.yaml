@@ -1,0 +1,23 @@
+services:
+  aas-environment:
+    image: eclipsebasyx/aas-environment:2.0.0-SNAPSHOT
+    container_name: basyx-aas-environment
+    ports:
+      - "8081:8081"
+      - "3000:3000"
+    environment:
+      - BASYX_CORS_ALLOWED_ORIGINS=http://localhost:3000
+      - BASYX_CORS_ALLOWED_METHODS=GET,POST,PATCH,DELETE,PUT,OPTIONS,HEAD
+    restart: unless-stopped
+
+  aas-web-ui:
+    image: eclipsebasyx/aas-gui:latest
+    container_name: basyx-aas-web-ui
+    network_mode: "service:aas-environment"
+    environment:
+      - AAS_REPO_PATH=http://localhost:8081/shells
+      - SUBMODELS_REPO_PATH=http://localhost:8081/submodels
+      - CD_REPO_PATH=http://localhost:8081/concept-descriptions
+    restart: unless-stopped
+    depends_on:
+      - aas-environment
