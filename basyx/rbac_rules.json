@@ -1,0 +1,201 @@
+[
+  {
+    "role": "viewer",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "aas",
+      "aasIds": "*"
+    }
+  },
+  {
+    "role": "viewer",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "submodel",
+      "submodelIds": "*",
+      "submodelElementIdShortPaths": "*"
+    }
+  },
+  {
+    "role": "viewer",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "concept-description",
+      "conceptDescriptionIds": "*"
+    }
+  },
+
+  {
+    "role": "admin",
+    "action": "CREATE",
+    "targetInformation": {
+      "@type": "aas",
+      "aasIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "aas",
+      "aasIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "UPDATE",
+    "targetInformation": {
+      "@type": "aas",
+      "aasIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "DELETE",
+    "targetInformation": {
+      "@type": "aas",
+      "aasIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "EXECUTE",
+    "targetInformation": {
+      "@type": "aas",
+      "aasIds": "*"
+    }
+  },
+
+  {
+    "role": "admin",
+    "action": "CREATE",
+    "targetInformation": {
+      "@type": "submodel",
+      "submodelIds": "*",
+      "submodelElementIdShortPaths": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "submodel",
+      "submodelIds": "*",
+      "submodelElementIdShortPaths": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "UPDATE",
+    "targetInformation": {
+      "@type": "submodel",
+      "submodelIds": "*",
+      "submodelElementIdShortPaths": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "DELETE",
+    "targetInformation": {
+      "@type": "submodel",
+      "submodelIds": "*",
+      "submodelElementIdShortPaths": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "EXECUTE",
+    "targetInformation": {
+      "@type": "submodel",
+      "submodelIds": "*",
+      "submodelElementIdShortPaths": "*"
+    }
+  },
+
+  {
+    "role": "admin",
+    "action": "CREATE",
+    "targetInformation": {
+      "@type": "concept-description",
+      "conceptDescriptionIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "concept-description",
+      "conceptDescriptionIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "UPDATE",
+    "targetInformation": {
+      "@type": "concept-description",
+      "conceptDescriptionIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "DELETE",
+    "targetInformation": {
+      "@type": "concept-description",
+      "conceptDescriptionIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "EXECUTE",
+    "targetInformation": {
+      "@type": "concept-description",
+      "conceptDescriptionIds": "*"
+    }
+  },
+
+  {
+    "role": "admin",
+    "action": "CREATE",
+    "targetInformation": {
+      "@type": "aas-environment",
+      "aasIds": "*",
+      "submodelIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "READ",
+    "targetInformation": {
+      "@type": "aas-environment",
+      "aasIds": "*",
+      "submodelIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "UPDATE",
+    "targetInformation": {
+      "@type": "aas-environment",
+      "aasIds": "*",
+      "submodelIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "DELETE",
+    "targetInformation": {
+      "@type": "aas-environment",
+      "aasIds": "*",
+      "submodelIds": "*"
+    }
+  },
+  {
+    "role": "admin",
+    "action": "EXECUTE",
+    "targetInformation": {
+      "@type": "aas-environment",
+      "aasIds": "*",
+      "submodelIds": "*"
+    }
+  }
+]
