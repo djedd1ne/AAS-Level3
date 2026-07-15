@@ -1,23 +1,48 @@
 services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mongosh", "-u", "${MONGO_USER}", "-p", "${MONGO_PASSWORD}", "--authenticationDatabase", "admin", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+
   aas-environment:
     image: eclipsebasyx/aas-environment:2.0.0-SNAPSHOT
     container_name: basyx-aas-environment
     ports:
       - "8081:8081"
-      - "3000:3000"
     environment:
-      - BASYX_CORS_ALLOWED_ORIGINS=http://localhost:3000
-      - BASYX_CORS_ALLOWED_METHODS=GET,POST,PATCH,DELETE,PUT,OPTIONS,HEAD
+      MONGO_USER: ${MONGO_USER}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - ./aas:/application/aas
+      - ./basyx/aas-env.properties:/application/application.properties
+    depends_on:
+      mongo:
+        condition: service_healthy
     restart: unless-stopped
 
   aas-web-ui:
     image: eclipsebasyx/aas-gui:latest
     container_name: basyx-aas-web-ui
-    network_mode: "service:aas-environment"
+    ports:
+      - "3000:3000"
     environment:
-      - AAS_REPO_PATH=http://localhost:8081/shells
-      - SUBMODELS_REPO_PATH=http://localhost:8081/submodels
-      - CD_REPO_PATH=http://localhost:8081/concept-descriptions
-    restart: unless-stopped
+      AAS_REPO_PATH: "http://localhost:8081/shells"
+      SUBMODEL_REPO_PATH: "http://localhost:8081/submodels"
+      CD_REPO_PATH: "http://localhost:8081/concept-descriptions"
     depends_on:
       - aas-environment
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
