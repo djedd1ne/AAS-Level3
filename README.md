@@ -1,6 +1,6 @@
 # AAS-Level3
 This repository contains the containerized **AAS Level 3** deployment stack.
-The architecture ensures that all communication—whether to the AAS Web UI, the AAS Environment API, or the Identity Provider—is encrypted and authorized via Role-Based Access Control (RBAC).
+The architecture ensures that all communication - whether to the AAS Web UI, the AAS Environment API, or the Identity Provider - is encrypted and authorized via Role-Based Access Control (RBAC).
 
 ## Architecture Overview
 The stack is composed of 6 interconnected services running in a unified bridge network (`basyx-net`):
