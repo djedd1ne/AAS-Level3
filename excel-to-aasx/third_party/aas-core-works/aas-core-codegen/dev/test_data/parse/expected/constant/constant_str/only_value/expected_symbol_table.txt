@@ -1,0 +1,13 @@
+UnverifiedSymbolTable(
+  our_types=[],
+  constants=[
+    ConstantPrimitive(
+      name='Something',
+      value='some value',
+      description=None,
+      node=...)],
+  verification_functions=[],
+  meta_model=MetaModel(
+    description=None,
+    version='dummy',
+    xml_namespace='https://dummy.com'))

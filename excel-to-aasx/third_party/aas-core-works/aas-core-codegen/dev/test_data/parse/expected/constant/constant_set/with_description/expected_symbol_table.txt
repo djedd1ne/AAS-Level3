@@ -1,0 +1,23 @@
+UnverifiedSymbolTable(
+  our_types=[],
+  constants=[
+    ConstantSet(
+      name='Something',
+      items_type_annotation=AtomicTypeAnnotation(
+        identifier='str',
+        node=...),
+      set_literals=[
+        SetLiteral(
+          node=...),
+        SetLiteral(
+          node=...)],
+      subsets=[],
+      description=Description(
+        document=...,
+        node=...),
+      node=...)],
+  verification_functions=[],
+  meta_model=MetaModel(
+    description=None,
+    version='dummy',
+    xml_namespace='https://dummy.com'))

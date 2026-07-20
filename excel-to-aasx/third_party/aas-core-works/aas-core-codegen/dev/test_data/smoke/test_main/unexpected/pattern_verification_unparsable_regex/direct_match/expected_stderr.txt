@@ -1,0 +1,5 @@
+Failed to translate the parsed symbol table to intermediate symbol table based on <meta_model.py>:
+* At line 1 and column 1: Failed to translate the parsed symbol table to an intermediate symbol table
+    At line 1 and column 1: Failed to translate the verification function 'match_something'
+      At line 4 and column 13: The function uses ``re`` module, but we could not match it as a pattern verification function. We can not transpile the code which relies on regular expressions directly to targets. Please make sure that your function can be understood as a pattern matching function.
+        At line 1 and column 1: Expected a ``bool`` return value

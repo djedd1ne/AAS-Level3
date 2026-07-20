@@ -1,0 +1,51 @@
+SymbolTable(
+  our_types=[
+    Enumeration(
+      name='SomeEnum',
+      literals=[
+        EnumerationLiteral(
+          name='Some_literal',
+          value='SOME-LITERAL',
+          description=None,
+          parsed=...),
+        EnumerationLiteral(
+          name='Another_literal',
+          value='ANOTHER-LITERAL',
+          description=None,
+          parsed=...),
+        EnumerationLiteral(
+          name='Yet_another_literal',
+          value='YET-ANOTHER-LITERAL',
+          description=None,
+          parsed=...)],
+      description=None,
+      literals_by_name=...,
+      literals_by_value=...,
+      literal_id_set=...,
+      literal_value_set=...,
+      parsed=...)],
+  our_types_topologically_sorted=[],
+  enumerations=[
+    'Reference to our type SomeEnum'],
+  constrained_primitives=[],
+  classes=[],
+  concrete_classes=[],
+  constants=[
+    ConstantSetOfEnumerationLiterals(
+      name='Something',
+      enumeration='Reference to Enumeration SomeEnum',
+      literals=[
+        'Reference to EnumerationLiteral Some_literal',
+        'Reference to EnumerationLiteral Another_literal'],
+      literal_id_set=...,
+      literal_value_set=...,
+      subsets=[],
+      description=None,
+      parsed=...)],
+  constants_by_name=...,
+  verification_functions=[],
+  verification_functions_by_name=...,
+  meta_model=MetaModel(
+    description=None,
+    version='dummy',
+    xml_namespace='https://dummy.com'))

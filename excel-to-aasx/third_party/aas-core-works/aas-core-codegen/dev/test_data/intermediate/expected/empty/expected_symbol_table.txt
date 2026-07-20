@@ -1,0 +1,15 @@
+SymbolTable(
+  our_types=[],
+  our_types_topologically_sorted=[],
+  enumerations=[],
+  constrained_primitives=[],
+  classes=[],
+  concrete_classes=[],
+  constants=[],
+  constants_by_name=...,
+  verification_functions=[],
+  verification_functions_by_name=...,
+  meta_model=MetaModel(
+    description=None,
+    version='dummy',
+    xml_namespace='https://dummy.com'))

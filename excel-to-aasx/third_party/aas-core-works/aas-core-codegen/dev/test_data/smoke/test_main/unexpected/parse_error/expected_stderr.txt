@@ -1,0 +1,4 @@
+Failed to construct the symbol table from <meta_model.py>:
+* Failed to parse the meta-model
+    The version (given as assignment to ``__version__``) is missing
+    The XML namespace (given as assignment to ``__xml_namespace__``) is missing

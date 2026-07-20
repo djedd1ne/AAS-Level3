@@ -1,0 +1,16 @@
+{
+  "submodels": [
+    {
+      "modelType": "Submodel",
+      "id": "an-identifier-1",
+      "idShort": "someIdShort",
+      "submodelElements": [
+        {
+          "modelType": "Property",
+          "idShort": "someElement",
+          "valueType": "xs:boolean"
+        }
+      ]
+    }
+  ]
+}

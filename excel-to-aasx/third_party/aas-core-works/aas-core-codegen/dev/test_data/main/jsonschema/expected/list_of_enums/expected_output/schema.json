@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "DummyForTest",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/Something"
+    }
+  ],
+  "$id": "https://dummy.com",
+  "definitions": {
+    "ModelType": {
+      "type": "string",
+      "enum": []
+    },
+    "Result": {
+      "type": "string",
+      "enum": [
+        "fail",
+        "ok"
+      ]
+    },
+    "Something": {
+      "type": "object",
+      "properties": {
+        "someResults": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Result"
+          }
+        }
+      },
+      "required": [
+        "someResults"
+      ]
+    }
+  }
+}

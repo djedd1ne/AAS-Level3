@@ -1,0 +1,26 @@
+{
+  "assetAdministrationShells": [
+    {
+      "assetInformation": {
+        "assetKind": "NotApplicable",
+        "assetType": "something_9f4c5692",
+        "defaultThumbnail": {
+          "path": "something_57b1bd09"
+        },
+        "globalAssetId": [
+          {
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "unexpected instance"
+              }
+            ],
+            "type": "ExternalReference"
+          }
+        ]
+      },
+      "id": "something_142922d6",
+      "modelType": "AssetAdministrationShell"
+    }
+  ]
+}

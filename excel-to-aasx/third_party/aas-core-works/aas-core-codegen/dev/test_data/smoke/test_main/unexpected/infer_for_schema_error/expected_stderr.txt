@@ -1,0 +1,6 @@
+Failed to construct the symbol table from <meta_model.py>:
+* Failed to parse the meta-model
+    At line 2 and column 2: Failed to parse the class definition: Something
+      At line 2 and column 2: Failed to parse the class definition: Something
+        At line 2 and column 3: The invariant must have a human-readable description
+        At line 3 and column 3: The invariant must have a human-readable description

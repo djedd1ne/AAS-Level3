@@ -1,0 +1,1 @@
+Expected the class 'Something' to inherit from another class, but it inherits from our type 'Some_enum' which is a 'Enumeration'

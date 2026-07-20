@@ -58,6 +58,33 @@ To run in the background (detached mode):
 docker compose up -d
 ```
 
+## Excel-to-AASX Data Extraction Branch
+
+The `data_extract` branch adds the Excel-to-AASX generator under:
+
+```text
+excel-to-aasx/
+```
+
+Use it to generate AASX packages from supplier workbooks, then sync generated
+packages into the runtime `aas/` folder:
+
+```bash
+cd excel-to-aasx
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -e .[dev]
+make generate COMPANY=schunk
+cd ..
+./scripts/sync-generated-aasx.sh schunk
+```
+
+Detailed integration notes:
+
+```text
+docs/data-extraction-integration.md
+```
+
 ## Accessing the Services
 Once all containers show a healthy or started status in your terminal, the services are securely routed through the proxy:
 
